@@ -3,7 +3,7 @@ import Message from "@components/message.js";
 
 describe("Message Component", () => {
   it("should render", () => {
-    const component = render(<Message message="test" />);
-    expect(component).toMatchSnapshot();
+    const { container } = render(<Message message="test" />);
+    expect(container).toMatchSnapshot();
   });
 });
