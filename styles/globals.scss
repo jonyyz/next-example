@@ -14,3 +14,30 @@ a {
 * {
   box-sizing: border-box;
 }
+
+table {
+  border-collapse: collapse;
+
+  th,
+  tr,
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #ddd;
+    text-align: left;
+  }
+}
+
+.field {
+  label {
+    font-weight: bold;
+    margin-right: 1em;
+  }
+}
+
+input {
+  padding: 0.5em;
+}
