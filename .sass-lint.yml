@@ -1,6 +1,3 @@
-#########################
-## Sample Sass Lint File
-#########################
 # Linter Options
 options:
   # Don't merge default rules
