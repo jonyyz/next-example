@@ -5,11 +5,10 @@ interface Props {
   message: String;
 }
 
-export default function Message(props: Props) {
+export default function Message({ message }: Props) {
   const {
     value: [value],
   } = useStore();
-  const { message } = props;
   return (
     <div>
       <div>{message}</div>
