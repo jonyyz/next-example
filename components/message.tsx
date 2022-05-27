@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { ACTION_GET_VALUE, useDispatch, useStore } from "@/store/index.js";
 
 interface Props {
