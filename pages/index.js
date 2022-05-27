@@ -61,7 +61,7 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              {transformedUsers.map(({ id, name, email }, index) => (
+              {transformedUsers.map(({ id, name, email }) => (
                 <tr key={id}>
                   <td>{name}</td>
                   <td>{email}</td>
