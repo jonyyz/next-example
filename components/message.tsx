@@ -6,7 +6,9 @@ interface Props {
 }
 
 export default function Message(props: Props) {
-  const { value } = useStore();
+  const {
+    value: [value],
+  } = useStore();
   const { message } = props;
   return (
     <div>
