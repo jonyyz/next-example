@@ -6,10 +6,35 @@ export function useStore() {
   return useContext(StoreContext);
 }
 
+export function useDispatch() {
+  const { dispatch } = useStore();
+  return dispatch;
+}
+
+export const ACTION_GET_VALUE = "GET_VALUE";
+
+const Actions = {
+  ACTION_GET_VALUE,
+};
+
 export default function Store({ children }) {
   const [value, setValue] = useState(42);
   const store = {
-    value: [value, setValue],
+    getters: {
+      value,
+    },
+    mutations: {
+      setValue,
+    },
+    actions: {
+      [ACTION_GET_VALUE]() {
+        setValue(43);
+      },
+    },
+  };
+
+  store.dispatch = function (action, payload) {
+    return store.actions[action](payload);
   };
 
   return (
