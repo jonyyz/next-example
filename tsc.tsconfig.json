@@ -14,7 +14,13 @@
     "jsx": "preserve",
     "noImplicitAny": true,
     "resolveJsonModule": true,
-    "module": "nodenext"
+    "module": "nodenext",
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/store/*": ["store/*"],
+      "@/styles/*": ["styles/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
