@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { StoreContext } from "@/store/index.js";
+import { useStore } from "@/store/index.js";
 
 interface Props {
   message: String;
 }
 
 export default function Message(props: Props) {
-  const { value } = useContext(StoreContext);
+  const { value } = useStore();
   const { message } = props;
   return (
     <div>

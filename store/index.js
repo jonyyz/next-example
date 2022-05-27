@@ -1,8 +1,12 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const StoreContext = createContext(null);
+const StoreContext = createContext(null);
 
-export default ({ children }) => {
+export function useStore() {
+  return useContext(StoreContext);
+}
+
+export default function Store({ children }) {
   const [value, setValue] = useState(42);
   const store = {
     value: [value, setValue],
@@ -11,4 +15,4 @@ export default ({ children }) => {
   return (
     <StoreContext.Provider value={store}>{children}</StoreContext.Provider>
   );
-};
+}
