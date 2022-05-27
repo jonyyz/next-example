@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import Message from "@/components/message.js";
+import Message from "@/components/message.tsx";
 
 export default function Home() {
   const [users, setUsers] = useState([]);
