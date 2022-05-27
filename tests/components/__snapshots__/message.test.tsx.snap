@@ -3,7 +3,12 @@
 exports[`Message Component should render 1`] = `
 <div>
   <div>
-    test
+    <div>
+      test
+    </div>
+    <div>
+      43
+    </div>
   </div>
 </div>
 `;
