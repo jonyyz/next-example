@@ -6,11 +6,12 @@ interface Props {
 }
 
 export default function Message({ message }: Props) {
+  const dispatch = useDispatch();
   const store = useStore();
 
   useEffect(() => {
-    store.dispatch(ACTION_GET_VALUE);
-  }, []);
+    dispatch(ACTION_GET_VALUE);
+  }, [dispatch]);
 
   return (
     <div>
