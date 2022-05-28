@@ -13,10 +13,6 @@ export function useDispatch() {
 
 export const ACTION_GET_VALUE = "GET_VALUE";
 
-const Actions = {
-  ACTION_GET_VALUE,
-};
-
 export default function Store({ children }) {
   const [value, setValue] = useState(42);
   const store = {
