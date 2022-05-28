@@ -18,7 +18,7 @@ export default function Home() {
     })();
   }, []);
 
-  const transformedUsers = useMemo(() => {
+  const filteredUsers = useMemo(() => {
     if (!searchText.trim()) return users;
 
     const lowerCaseSearchText = searchText.trim().toLowerCase();
@@ -61,7 +61,7 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              {transformedUsers.map(({ id, name, email }) => (
+              {filteredUsers.map(({ id, name, email }) => (
                 <tr key={id}>
                   <td>{name}</td>
                   <td>{email}</td>
