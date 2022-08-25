@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
+import Counter from "@/components/counter.tsx";
 import Message from "@/components/message.tsx";
 import StoreProvider from "@/store/index.js";
 
@@ -44,7 +45,8 @@ export default function Home() {
         </Head>
         <main className={styles.main}>
           <h1>Users</h1>
-          <Message message="This is a test" />
+          <Message text="This is a test" />
+          <Counter />
           <div className="field">
             <label>Search Text:</label>
             <input
