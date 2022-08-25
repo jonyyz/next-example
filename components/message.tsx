@@ -1,22 +1,9 @@
-import { useEffect } from "react";
-import { ACTION_GET_VALUE, useDispatch, useStore } from "@/store/index.js";
+import { memo } from "react";
 
 interface Props {
-  message: String;
+  text: String;
 }
 
-export default function Message({ message }: Props) {
-  const dispatch = useDispatch();
-  const store = useStore();
-
-  useEffect(() => {
-    dispatch(ACTION_GET_VALUE);
-  }, [dispatch]);
-
-  return (
-    <div>
-      <div>{message}</div>
-      <div>{store.getters.value}</div>
-    </div>
-  );
-}
+export default memo(function Message({ text }: Props) {
+  return <div>Message: {text}</div>;
+});
