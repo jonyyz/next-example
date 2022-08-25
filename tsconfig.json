@@ -13,6 +13,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "noImplicitAny": true,
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
